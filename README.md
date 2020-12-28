@@ -1,1 +1,1 @@
-# NOIP模拟联赛
+#noipsimulattioncompetition.github.io
