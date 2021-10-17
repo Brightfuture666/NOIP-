@@ -16,16 +16,14 @@ int main() {
 		for (int j = 1; j <= m; j++) {
 			if (a[i] != b[j]) {
 				f[i][j] = 0;
-				if (l > l_max) {
-					l_max = l;
-				}
-				l = 0;
 			} else {
 				f[i][j] = f[i - 1][j - 1] + 1; ans = max(ans, f[i][j]);
 				if (f[i][j] >= ans) {
 					cnt = i;
 				}
-				l++;
+				if (f[i][j] > l_max)  {
+					l_max = f[i][j];
+				}
 			}
 		}
 	}
